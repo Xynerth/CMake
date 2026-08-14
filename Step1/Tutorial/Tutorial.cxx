@@ -2,6 +2,7 @@
 #include <cmath>
 #include <iostream>
 #include <string>
+#include "../MathFunctions/MathFunctions.h"
 
 // TODO8: Include the MathFunctions header
 
@@ -17,7 +18,7 @@ int main(int argc, char* argv[])
 
   // TODO9: Use the mathfunctions::sqrt function
   // calculate square root
-  double const outputValue = std::sqrt(inputValue);
+  double const outputValue = mathfunctions::sqrt(inputValue);
   std::cout << "The square root of " << inputValue << " is " << outputValue
             << std::endl;
 }

@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.23)
 # TODO2: Create a project named Tutorial
 project(Tutorial)
 
+#[[
 # TODO3: Add an executable target called Tutorial to the project
 add_executable(Tutorial)
 
@@ -15,9 +16,15 @@ target_sources(Tutorial
 
 # TODO7: Add the MathFunctions library as a linked dependency
 #        to the Tutorial target
+target_link_libraries(Tutorial
+    PRIVATE
+        MathFunctions)
+]]
 
 # TODO11: Add the Tutorial subdirectory to the project
+add_subdirectory(Tutorial)
 
+#[[
 # TODO5: Add a library target called MathFunctions to the project
 add_library(MathFunctions)
 
@@ -35,6 +42,7 @@ target_sources(MathFunctions
         FILES
             MathFunctions/MathFunctions.h        
 )
-
+]]
 
 # TODO13: Add the MathFunctions subdirectory to the project
+add_subdirectory(MathFunctions)
